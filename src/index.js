@@ -1,16 +1,17 @@
 import './style.scss';
 import {titleBar} from "./titleBar/titleBar";
+import {body} from "./body/body";
 
 const setupPage = () => {
  document.querySelector('header').appendChild(titleBar());
+ document.querySelector('main').appendChild(body());
  
- const tmp = document.createElement('div');
- tmp.style.height = '1500px';
-  document.querySelector('footer').appendChild(tmp);
+ //document.querySelector('footer').appendChild(tmp);
 }
+
 
 document.addEventListener('DOMContentLoaded', setupPage);
 
 window.addEventListener('scroll', () => {
- document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+ document.body.style.setProperty('--scroll', window.pageYOffset / window.innerHeight);
  }, false);
