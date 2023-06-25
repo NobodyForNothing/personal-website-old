@@ -45,7 +45,12 @@ function faq() {
 function buildTitle(text) {
     const title = document.createElement('h1');
     title.innerText = text;
-    title.id = text;
+
+    const anchor = document.createElement('div');
+    anchor.id = text;
+    anchor.classList.add('title-anchor');
+
+    title.appendChild(anchor);
     return title;
 }
 
