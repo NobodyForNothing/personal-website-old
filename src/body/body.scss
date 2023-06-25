@@ -14,3 +14,33 @@
     margin-top: 80px;
     font-weight: bolder;
 }
+
+.projects-grid {
+    display: grid;
+    margin: 0 -5px;
+    text-align: center;
+    grid-template-columns: repeat(2,50%);
+    column-gap: 10px;
+}
+.projects-grid a {
+    text-decoration: none;
+    color: #000;
+}
+
+.projects-grid img {
+    height: 512px;
+}
+
+.projects-grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.projects-grid > * {
+    border: solid 1px #000;
+    border-radius: 40px;
+    position: relative;
+    padding: 50px;
+    cursor: pointer;
+}
