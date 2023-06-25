@@ -34,6 +34,11 @@ function sectionsBar() {
         sectBtn.classList.add('section-btn');
         sectBtn.innerText = sectName;
         sectBtn.href = `#${sectName}`;
+        sectBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            const target = document.querySelector(event.target.getAttribute("href"));
+            target.scrollIntoView({ behavior: "smooth" });
+        });
         sectContain.appendChild(sectBtn);
     }
 

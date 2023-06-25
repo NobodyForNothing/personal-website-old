@@ -1,3 +1,10 @@
+@mixin scrollAnim {
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -0.9s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
 #title-bar {
     position: fixed;
     top: 0;
@@ -17,10 +24,7 @@
     border-radius: 50px;
 
     animation: collapse-title-bar 1s linear;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -0.9s);
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
+    @include scrollAnim;
 }
 
 @keyframes collapse-title-bar {
@@ -45,10 +49,7 @@
     margin-left: 40px;
     
     animation: collapse-title-bar-title 1s linear;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -0.9s);
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
+    @include scrollAnim;
 }
 
 @keyframes collapse-title-bar-title {
@@ -73,12 +74,10 @@
     top: 25%;
     font-size: 40px;
     margin-right: 20px;
+    z-index: 101;
 
     animation: collapse-sections-bar 1s linear;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -0.9s);
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
+    @include scrollAnim;
 }
 
 @keyframes collapse-sections-bar {
@@ -115,10 +114,7 @@
     visibility: hidden;
 
     animation: hide-title-bar-deco 1s linear;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -0.9s);
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
+    @include scrollAnim;
 }
 @keyframes hide-title-bar-deco {
     0% {
