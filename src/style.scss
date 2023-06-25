@@ -7,4 +7,17 @@
 body {
     font-family: 'Valera Round', serif;
     font-size: 24px;
+
+    --page-title-font-size: 90px;
+    --body-width: 95%;
+    --projects-per-row: 1;
 }
+@media (min-width: 1300px) {
+ body {
+  --page-title-font-size: 140px;
+  --body-width: 50%;
+  --projects-per-row: 2;
+ }
+}
+
+

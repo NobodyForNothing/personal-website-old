@@ -46,7 +46,7 @@ function projects() {
         'Gamepad mouse',
         'Use your controller as a mouse',
         'https://github.com/NobodyForNothing/gamepad_mouse',
-        webImg('https://github.com/NobodyForNothing/gamepad_mouse/blob/master/controller_bindings.png?raw=true',700)
+        webImg('https://github.com/NobodyForNothing/gamepad_mouse/blob/master/controller_bindings.png?raw=true')
         ));
     section.appendChild(projectsGrid);
     
@@ -100,10 +100,13 @@ function buildProjectCard(title, description, link, img) {
     const titleElement = document.createElement('h2');
     textOrChild(titleElement, title);
     const descriptionElement = buildParagraph(description);
+    const imgContainer = document.createElement('div');
+    imgContainer.classList.add('project-thumb');
+    imgContainer.appendChild(img)
 
     const innerCard = document.createElement('a');
     innerCard.href = link;
-    innerCard.appendChild(img);
+    innerCard.appendChild(imgContainer);
     innerCard.appendChild(titleElement);
     innerCard.appendChild(descriptionElement);
 

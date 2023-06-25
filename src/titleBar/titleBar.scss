@@ -54,7 +54,7 @@
 
 @keyframes collapse-title-bar-title {
     from {
-        font-size: 140px;
+        font-size: var(--page-title-font-size);
         top: 40%;
         left: 50%;
         transform: translateX(-50%);

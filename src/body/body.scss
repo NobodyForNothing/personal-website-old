@@ -1,6 +1,6 @@
 #body-container {
     position: absolute;
-    width: 50%;
+    width: var(--body-width);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -19,16 +19,13 @@
     display: grid;
     margin: 0 -5px;
     text-align: center;
-    grid-template-columns: repeat(2,50%);
+    grid-template-columns: repeat(var(--projects-per-row), calc(1 /var(--projects-per-row) * 100%));
     column-gap: 10px;
+    row-gap: 10px;
 }
 .projects-grid a {
     text-decoration: none;
     color: #000;
-}
-
-.projects-grid img {
-    height: 512px;
 }
 
 .projects-grid:after {
@@ -43,4 +40,17 @@
     position: relative;
     padding: 50px;
     cursor: pointer;
+    min-height: 1024px;
+}
+
+.project-thumb {
+    position: relative;
+    height: 512px;
+}
+.project-thumb > img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }

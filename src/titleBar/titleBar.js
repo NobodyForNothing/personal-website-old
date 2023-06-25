@@ -36,7 +36,8 @@ function sectionsBar() {
         sectBtn.href = `#${sectName}`;
         sectBtn.addEventListener('click', (event) => {
             event.preventDefault();
-            const target = document.querySelector(event.target.getAttribute("href"));
+            const link = event.target.getAttribute("href");
+            const target = document.querySelector(link);
             target.scrollIntoView({ behavior: "smooth" });
         });
         sectContain.appendChild(sectBtn);
