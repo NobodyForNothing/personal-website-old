@@ -10,6 +10,7 @@
     height: 100px;
     background-color: #002336;
     color: white;
+    font-weight: bolder;
     padding: 10px;
     margin: 30px;
     border-radius: 50px;
@@ -21,15 +22,10 @@
 }
 
 #derdilla-com-title {
-    position:absolute;
-    top:50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
     font-size: 50px;
-    left: 9%;
+
     
     animation: collapse-title-bar-title 1s linear;
     animation-play-state: paused;
@@ -41,22 +37,64 @@
 @keyframes collapse-title-bar {
     from {
         padding: 60px;
-        height: 400px;
+        height: 600px;
     }
-
     to {
         padding: 10px;
         height: 100px;
     }
 }
 @keyframes collapse-title-bar-title {
-    0% {
+    from {
         font-size: 140px;
+        top: 40%;
         left: 50%;
+        transform: translateX(-50%);
     }
 
-    100% {
+    to {
         font-size: 50px;
-        left: 9%;
+        left: 0%;
+        top: 25%;
+        transform: translateX(0%);
     }
+}
+
+#sections-bar {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    font-size: 40px;
+
+    animation: collapse-sections-bar 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -0.9s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes collapse-sections-bar {
+    from {
+        right: 50%;
+        top: 110%;
+        transform: translateX(50%);
+        font-size: 70px;
+    }
+
+    to {
+        right: 0;
+        top: 25%;
+        font-size: 40px;
+    }
+}
+
+.section-btn {
+    padding: 30px;
+    color: #6fbbe4;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.section-btn:hover {
+    backdrop-filter: brightness(120%);
 }
