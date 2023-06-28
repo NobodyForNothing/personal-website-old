@@ -17,7 +17,7 @@
 
 .projects-grid {
     display: grid;
-    margin: 0 -5px;
+    margin: 0 5px;
     text-align: center;
     grid-template-columns: repeat(var(--projects-per-row), calc(1 /var(--projects-per-row) * 100%));
     column-gap: 10px;
@@ -38,7 +38,7 @@
     border: solid 1px #000;
     border-radius: 40px;
     position: relative;
-    padding: 50px;
+    padding: 10px;
     cursor: pointer;
     min-height: 1024px;
 }
