@@ -5,8 +5,6 @@ import {body} from "./body/body";
 const setupPage = () => {
  document.querySelector('header').appendChild(titleBar());
  document.querySelector('main').appendChild(body());
- 
- //document.querySelector('footer').appendChild(tmp);
 }
 
 
