@@ -4,8 +4,7 @@ export function body() {
     const container = document.createElement('div');
     container.id = 'body-container';
     
-    console.log((window.screen.width < 1028) ? 60 : 1550);
-    container.appendChild(spacer((window.screen.width < 1028) ? 60 : 1550));
+    container.appendChild(spacer((window.screen.width < 1028) ? 10 : 1550));
     container.appendChild(about());
     container.appendChild(projects());
     container.appendChild(faq());

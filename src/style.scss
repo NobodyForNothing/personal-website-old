@@ -9,15 +9,20 @@ body {
     font-size: 24px;
 
     --page-title-font-size-big: 40px;
-    --page-title-font-size-small: 30px;
+    --page-title-font-size-small: 20px;
+    --page-options-padding: 10px;
     --body-width: 95%;
     --projects-per-row: 1;
+    --title-bar-bg-height: 50px;
 }
 @media (min-width: 1300px) {
  body {
   --page-title-font-size-big: 140px;
+  --page-title-font-size-small: 30px;
+  --page-options-padding: 30px;
   --body-width: 50%;
   --projects-per-row: 2;
+  --title-bar-bg-height: 100px;
  }
 }
 

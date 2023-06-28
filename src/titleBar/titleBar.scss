@@ -15,7 +15,7 @@
 
 #title-bar-bg {
     position: relative;
-    height: 100px;
+    height: var(--title-bar-bg-height);
     background-color: #002336;
     color: white;
     font-weight: bolder;
@@ -36,7 +36,7 @@
     }
     to {
         padding: 10px;
-        height: 100px;
+        height: var(--title-bar-bg-height);
         border-radius: 0;
         margin: 0;
     }
@@ -96,7 +96,7 @@
 }
 
 .section-btn {
-    padding: 30px;
+    padding: var(--page-options-padding);
     color: #6fbbe4;
     text-decoration: none;
     border-radius: 30px;
