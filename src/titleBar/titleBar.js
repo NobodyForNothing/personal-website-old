@@ -2,43 +2,44 @@ import './titleBar.scss';
 import {flower} from "../deco/titleBarDeco";
 
 
-export function titleBar() {
+export function titleBar(sections, title='DERDILLA.COM') {
     const bar = document.createElement('div');
     bar.id = 'title-bar';
     
     const barBg = document.createElement('div');
     barBg.id = 'title-bar-bg';
     
-    barBg.appendChild(derdillaComTitle());
-    barBg.appendChild(sectionsBar());
+    barBg.appendChild(derdillaComTitle(title));
+    barBg.appendChild(sectionsBar(sections));
     barBg.appendChild(titleBarDeco())
     bar.appendChild(barBg)
     
     return bar;
 }
 
-function derdillaComTitle() {
+function derdillaComTitle(text) {
     const title = document.createElement('a');
-    title.innerText = 'DERDILLA.COM';
+    title.innerText = text;
     title.id = 'derdilla-com-title';
     return title;
 }
 
-const sections = ['about', 'projects', 'faq'];
-function sectionsBar() {
+function sectionsBar(sections) {
     const sectContain = document.createElement('div');
     sectContain.id = 'sections-bar';
 
-    for (const sectName of sections) {
+    for (const sect of sections) {
         const sectBtn = document.createElement('a');
         sectBtn.classList.add('section-btn');
-        sectBtn.innerText = sectName;
-        sectBtn.href = `#${sectName}`;
+        sectBtn.innerHTML = sect.innerHTML;
+        sectBtn.href = sect.href;
         sectBtn.addEventListener('click', (event) => {
-            event.preventDefault();
             const link = event.target.getAttribute("href");
-            const target = document.querySelector(link);
-            target.scrollIntoView({ behavior: "smooth" });
+            if (link.charAt(0) === '#') {
+                event.preventDefault();
+                const target = document.querySelector(link);
+                target.scrollIntoView({ behavior: "smooth" });
+            }
         });
         sectContain.appendChild(sectBtn);
     }
@@ -69,3 +70,7 @@ function titleBarDeco() {
     decoContainer.appendChild(flower2);
     return decoContainer
 }
+
+window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll', window.pageYOffset / window.innerHeight);
+    }, false);

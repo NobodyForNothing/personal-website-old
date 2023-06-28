@@ -48,7 +48,7 @@ module.exports = env => {
                    new HtmlWebpackPlugin({
                      inject: 'body',
                      template: `./index.html`,
-                     filename: `${page}`,
+                     filename: `${page}.html`,
                      chunks: [page],
                    })
                ),
