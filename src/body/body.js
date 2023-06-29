@@ -81,3 +81,21 @@ export function textOrChild(parent, content) {
         parent.appendChild(content);
     }
 }
+
+export function simpleMarkDown(text) {
+    const container = document.createElement('div');
+    
+    const simpleTransformedText = text
+		.replace(/^### (.*$)/gim, '<h3>$1</h3>') // h3
+		.replace(/^## (.*$)/gim, '<h2>$1</h2>') // h2 
+        .replace(/^# (.*$)/gim, '<h1>$1</h1>') // h1
+		.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>') // bold
+        .replace(/\*(.*)\*/gim, '<i>$1</i>'); // italic 
+
+    // links
+    const linkReplacedText = simpleTransformedText
+        .replace(/(\[.*\])(\((http)(?:s)?(\:\/\/).*\))/gim, '<a href=$2>$1</a>');
+
+    container.innerHTML = linkReplacedText; 
+    return container;
+}
