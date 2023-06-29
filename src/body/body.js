@@ -94,7 +94,7 @@ export function simpleMarkDown(text) {
 
     // links
     const linkReplacedText = simpleTransformedText
-        .replace(/(\[.*\])(\((http)(?:s)?(\:\/\/).*\))/gim, '<a href=$2>$1</a>');
+        .replace(/\[(.*)\](\((http)(?:s)?(\:\/\/).*\))/gim, '<a href="$2">$1</a>');
 
     container.innerHTML = linkReplacedText; 
     return container;
