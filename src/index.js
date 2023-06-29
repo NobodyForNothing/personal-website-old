@@ -71,8 +71,8 @@ function faq() {
 
     section.appendChild(buildTitle('faq'));
     section.appendChild(qa('What does derdilla mean?', "Nothing really. It's just pseudonym."));
-    section.appendChild(qa('Wow, you have amazing formulations! Did you study linguistics?', "No, that's just ChatGPT. This might as well be the only thing it's useful for"));
-
+    section.appendChild(qa('Wow, the about section is so long! Did you study linguistics?', "No, that's just ChatGPT. This might as well be the only thing it's useful for"));
+    section.appendChild(qa('I have found a bug in your website / Want to give feedback. How can I do it?', 'You can do so on the <a href="https://github.com/NobodyForNothing/personal-website">github repo</a> associated with this site.'));
     return section;
 }
 
