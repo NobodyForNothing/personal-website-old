@@ -1,6 +1,7 @@
 import './style.scss';
 import {titleBar} from "./titleBar/titleBar";
 import {spacer, buildTitle, buildParagraph, qa, buildProjectCard, webImg, webText, simpleMarkDown} from "./body/body";
+import {buildFooter} from "./footer/footer.js";
 
 const setupPage = () => {
  document.querySelector('header').appendChild(titleBar([
@@ -9,7 +10,8 @@ const setupPage = () => {
     {innerHTML: 'FAQ', href: '#faq'},
     {innerHTML: 'Blog', href: './blog.html'},
 ]));
- document.querySelector('main').appendChild(body());
+  document.querySelector('main').appendChild(body());
+  document.querySelector('footer').appendChild(buildFooter());
 }
 
 
