@@ -1,7 +1,7 @@
 import './style.scss';
 import {titleBar} from "./titleBar/titleBar";
 import {spacer, buildTitle, buildParagraph, qa, buildProjectCard, webImg, webText, simpleMarkDown} from "./body/body";
-import {buildFooter} from "./footer/footer.js";
+import {buildFooter} from "./footer/footer";
 
 const setupPage = () => {
  document.querySelector('header').appendChild(titleBar([
