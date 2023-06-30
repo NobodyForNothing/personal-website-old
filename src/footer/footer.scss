@@ -1,0 +1,23 @@
+
+#footer {
+    display: grid;
+    grid-timplate-columns: repeat(2,50%);
+    collumn-gap: 30px;
+    row-gap: 30px;
+    background-color: #000;
+    color: #444;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 100px;
+}
+
+#footer:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
