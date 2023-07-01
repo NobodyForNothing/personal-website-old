@@ -2,12 +2,10 @@
 #footer {
     display: grid;
     grid-timplate-columns: repeat(2,50%);
-    collumn-gap: 30px;
-    row-gap: 30px;
+    collumn-gap: 10px;
+    row-gap: 10px;
     background-color: #000;
-    color: #444;
     text-align: center;
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -21,3 +19,7 @@
     clear: both;
 }
 
+.footer-item .footer-item:hover .footer-item:link .footer-item:active .footer-item:visited {
+    color: #888 !important;
+    text-decoration: none !important;
+}
