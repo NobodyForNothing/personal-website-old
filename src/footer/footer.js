@@ -9,9 +9,9 @@ export function buildFooter(){
 }
 
 function footerItem(text, link) {
-    const link = document.createElement('a');
-    link.classList.add('footer-item');
-    link.innerHTML = text;
-    link.href = link;
-    return link;
+    const linkElement = document.createElement('a');
+    linkElement.classList.add('footer-item');
+    linkElement.innerHTML = text;
+    linkElement.href = link;
+    return linkElement;
 }
