@@ -23,7 +23,6 @@ function body() {
     container.appendChild(about());
     container.appendChild(projects());
     container.appendChild(faq());
-    container.appendChild(spacer(1600));
     
     return container;
 }

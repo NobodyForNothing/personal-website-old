@@ -1,25 +1,30 @@
 
 #footer {
-    display: grid;
-    grid-timplate-columns: repeat(2,50%);
-    collumn-gap: 10px;
-    row-gap: 10px;
+    position: relative;
+    left: -8px;
+    bottom: -8px;
     background-color: #000;
-    text-align: center;
-    bottom: 0;
-    left: 0;
     width: 100%;
     z-index: 99;
-    padding: 100px;
 }
 
-#footer:after {
+#footer-grid {
+    display: grid;
+    padding: 30px;
+    margin: 0 5px;
+    text-align: center;
+    grid-template-columns: repeat(2, 50%);
+}
+#footer-grid:after {
     display: table;
     content: "";
     clear: both;
 }
 
-.footer-item .footer-item:hover .footer-item:link .footer-item:active .footer-item:visited {
+.footer-item {
     color: #888 !important;
     text-decoration: none !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    overflow-wrap: break-word;
 }

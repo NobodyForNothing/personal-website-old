@@ -1,10 +1,12 @@
 import './style.scss';
 import {titleBar} from "./titleBar/titleBar";
 import {buildTitle, spacer} from "./body/body";
+import {buildFooter} from "./footer/footer";
 
 const setupPage = () => {
  document.querySelector('header').appendChild(titleBar([{innerHTML: 'Home', href: './'}], 'BLOG'));
  document.querySelector('main').appendChild(body());
+ document.querySelector('footer').appendChild(buildFooter());
 }
 
 function body() {
